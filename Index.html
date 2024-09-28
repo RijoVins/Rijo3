@@ -1,0 +1,123 @@
+<html>
+  <head>
+    <style>
+      img{
+        width: 600;
+        height: 600;
+        margin-left: 30%;
+      }
+      body{
+        font-size: x-large;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+
+
+
+
+    </style>
+
+  </head>
+  <body>
+    <h1>
+      Constraint Satisfaction Problems (CSP):
+    </h1>
+
+<p>
+  Finding a solution that meets a set of constraints is the goal of constraint satisfaction problems (CSPs), a type of AI issue. Finding values for a group of variables that fulfill a set of restrictions or rules is the aim of constraint satisfaction problems. For tasks including resource allocation, planning, scheduling, and decision-making, CSPs are frequently employed in AI.
+
+</p>
+<img src="images/img1.jpeg">
+<h4>
+  There are mainly three basic components in the constraint satisfaction problem:
+
+</h4>
+
+<p><b>
+  Variables:</b> The things that need to be determined are variables. Variables in a CSP are the objects that must have values assigned to them in order to satisfy a particular set of constraints. Boolean, integer, and categorical variables are just a few examples of the various types of variables, for instance, could stand in for the many puzzle cells that need to be filled with numbers in a sudoku puzzle.
+</p>
+<p><b>
+  Domains:</b> The range of potential values that a variable can have is represented by domains. Depending on the issue, a domain may be finite or limitless. For instance, in Sudoku, the set of numbers from 1 to 9 can serve as the domain of a variable representing a problem cell.
+
+</p>
+<p><b>
+  Constraints:</b> The guidelines that control how variables relate to one another are known as constraints. Constraints in a CSP define the ranges of possible values for variables. Unary constraints, binary constraints, and higher-order constraints are only a few examples of the various sorts of constraints. For instance, in a sudoku problem, the restrictions might be that each row, column, and 3×3 box can only have one instance of each number from 1 to 9.
+
+</p>
+
+<h2>
+  Constraint Satisfaction Problems (CSP) representation:
+
+</h2>
+
+<ul>
+  <li>The finite set of variables V1, V2, V3 ……………..Vn.></li>
+   <li >Non-empty domain for every single variable D1, D2, D3 …………..Dn.</li>
+   
+</ul>
+<ul>
+  <li>where each constraint Ci restricts the possible values for variables,
+  </li><ul>
+    <li>e.g., V1 ≠ V2
+
+    </li>
+  </ul>
+  <li> Each constraint Ci is a pair <scope, relation>  
+  </li>
+  <ul>Example: <(V1, V2), V1 not equal to V2> 
+  </ul>
+  <li>Scope = set of variables that participate in constraint. 
+  </li>
+  <li>Relation = list of valid variable value combinations. 
+  </li>
+  <ul>There might be a clear list of permitted combinations. Perhaps a relation that is abstract and that allows for membership testing and listing.
+  </ul>
+</ul>
+
+<h4>
+  Constraint Satisfaction Problems (CSP) algorithms:
+
+</h4>
+<ul>
+  <li>The backtracking algorithm is a depth-first search algorithm that methodically investigates the search space of potential solutions up until a solution is discovered that satisfies all the restrictions. The method begins by choosing a variable and giving it a value before repeatedly attempting to give values to the other variables. The method returns to the prior variable and tries a different value if at any time a variable cannot be given a value that fulfills the requirements. Once all assignments have been tried or a solution that satisfies all constraints has been discovered, the algorithm ends.
+  </li>
+  <li>The forward-checking algorithm is a variation of the backtracking algorithm that condenses the search space using a type of local consistency. For each unassigned variable, the method keeps a list of remaining values and applies local constraints to eliminate inconsistent values from these sets. The algorithm examines a variable’s neighbors after it is given a value to see whether any of its remaining values become inconsistent and removes them from the sets if they do. The algorithm goes backward if, after forward checking, a variable has no more values.
+  </li>
+  <li>Algorithms for propagating constraints are a class that uses local consistency and inference to condense the search space. These algorithms operate by propagating restrictions between variables and removing inconsistent values from the variable domains using the information obtained.
+  </li>
+</ul>
+
+<h3>
+  Real-world Constraint Satisfaction Problems (CSP):
+
+</h3>
+<ul>
+  <b><li>Scheduling:</b> A fundamental CSP problem is how to efficiently and effectively schedule resources like personnel, equipment, and facilities. The constraints in this domain specify the availability and capacity of each resource, whereas the variables indicate the time slots or resources.
+  </li>
+  <b>
+  <li>Vehicle routing:</b> Another example of a CSP problem is the issue of minimizing travel time or distance by optimizing a fleet of vehicles’ routes. In this domain, the constraints specify each vehicle’s capacity, delivery locations, and time windows, while the variables indicate the routes taken by the vehicles.
+  </li>
+  <b>
+  <li>Assignment:</b> Another typical CSP issue is how to optimally assign assignments or jobs to humans or machines. In this field, the variables stand in for the tasks, while the constraints specify the knowledge, capacity, and workload of each person or machine.
+  </li>
+  <b>
+  <li>Sudoku:</b> The well-known puzzle game Sudoku can be modeled as a CSP problem, where the variables stand in for the grid’s cells and the constraints specify the game’s rules, such as prohibiting the repetition of the same number in a row, column, or area.
+  </li>
+  <b>
+  <li>Constraint-based image segmentation:</b> The segmentation of an image into areas with various qualities (such as color, texture, or shape) can be treated as a CSP issue in computer vision, where the variables represent the regions and the constraints specify how similar or unlike neighboring regions are to one another.
+  </li>
+</ul>
+<h3>
+  Constraint Satisfaction Problems (CSP) benefits:
+
+</h3>
+<ul>
+  <li> conventional representation patterns
+  </li>
+  <li>generic successor and goal functions
+  </li>
+  <li>Standard heuristics (no domain-specific expertise).
+  </li>
+</ul>
+  </body>
+</html>
